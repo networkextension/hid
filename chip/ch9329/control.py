@@ -17,7 +17,7 @@ class Control:
         self.hid_command_keys = [
             "LEFT_CTRL",
             "RIGHT_CTRL",
-            "LEFT_SHIFT"
+            "LEFT_SHIFT",
             "RIGHT_SHIFT",
             "LEFT_ALT",
             "RIGHT_ALT",
