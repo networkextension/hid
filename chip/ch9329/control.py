@@ -4,7 +4,7 @@
 import time
 import math
 import random
-from lib import screen
+#from lib import screen
 from chip.ch9329 import map
 
 
@@ -24,8 +24,8 @@ class Control:
             "LEFT_WIN",
             "RIGHT_WIN"
         ]
-        self.screen_resolution = screen.get_zoom_resolution()
-        self.screen_ratio = screen.get_zoom_ratio()
+        self.screen_resolution ={0,0}# screen.get_zoom_resolution()
+        self.screen_ratio = 1.33#screen.get_zoom_ratio()
 
     # [累加和]收尾
     # 关于SUM累加和的理解：SUM = HEAD+ADDR+CMD+LEN+DATA
@@ -176,8 +176,9 @@ class Control:
             y = self.screen_resolution[1] - 50
 
         # 获取当前鼠标的位置
-        sx, sy = screen.get_mouse_position()
-
+        #sx, sy = screen.get_mouse_position()
+        sx = 100
+        sy = 100
         step = math.floor(3 / self.screen_ratio * random.randint(5, 6))
         abs_x = abs(x - sx)
         abs_y = abs(y - sy)
